@@ -12,6 +12,11 @@ body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
 }
+
+.inactive {
+    display: none;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -49,11 +54,18 @@ nav {
     border: 1px solid var(--hospital-green);
     color: var(--hospital-green);
 }
+
 .navbar-email {
     color: var(--very-light-pink);
     font-size: var(--sm);
     margin-right: 12px;
+    cursor: pointer;
 }
+
+.navbar-email:hover {
+    color: var(--black);
+}
+
 .navbar-shopping-cart {
     position: relative;
 }
@@ -72,8 +84,12 @@ nav {
     align-items: center;
 }
 .desktop-menu {
+    position: absolute;
+    top: 60px;
+    right: 60px;
     width: 100px;
     height: auto;
+    background-color: var(--white);
     border: 1px solid var(--very-light-pink);
     border-radius: 6px;
     padding: 20px 20px 0 20px;
