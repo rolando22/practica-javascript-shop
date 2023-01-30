@@ -120,10 +120,11 @@ nav {
     display: inline-block;
 }
 .mobile-menu {
+    width: calc(100% - 24px);
     position: absolute;
     top: 60px;
     left: -5px;
-    padding: 24px;
+    padding-left: 24px;
     background-color: var(--white);
 }
 .mobile-menu a {
@@ -396,7 +397,7 @@ nav {
     height: 14px;
     position: absolute;
     top: 12px;
-    left: 12px;
+    left: 35px;
     z-index: 2;
     padding: 12px;
     border-radius: 50%;
@@ -509,6 +510,9 @@ nav {
         height: 140px;
     }
     .product-detail {
+        width: 90%;
+    }
+    .shopping-cart-detail {
         width: 100%;
     }
     .secondary-button {
