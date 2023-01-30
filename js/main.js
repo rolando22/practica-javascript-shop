@@ -24,3 +24,54 @@ function toggleCart () {
     desktopMenu.classList.add('inactive');
     cart.classList.toggle('inactive');
 }
+
+function initArray () {
+    let products = [];
+
+    for (let i = 0; i < 20; i++) {
+        products.push({
+            name: 'Bike',
+            price: 120.00,
+            image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        });
+    }
+    return products;
+}
+
+function renderProducts () {
+    const products = initArray();
+    const cardsContainer = document.querySelector('.cards-container');
+
+    for (let product of products) {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+
+        const productImg = document.createElement('img');
+        productImg.setAttribute('src', product.image);
+        productImg.setAttribute('alt', product.name);
+
+        const productInfo = document.createElement('div');
+        productInfo.classList.add('product-info');
+
+        const productInfoDiv = document.createElement('div');
+
+        const productPrice = document.createElement('p');
+        productPrice.innerText = `$${product.price.toString().replace('.', ',')}`;
+        const productName = document.createElement('p');
+        productName.innerText = product.name;
+
+        const productInfoFigure = document.createElement('figure');
+
+        const addCartIcon = document.createElement('img');
+        addCartIcon.setAttribute('src', './icons/Platzi_YardSale_Icons/bt_add_to_cart.svg');
+        addCartIcon.setAttribute('alt', 'Add-Cart Icon');
+
+        productInfoFigure.appendChild(addCartIcon);
+        productInfoDiv.append(productPrice, productName);
+        productInfo.append(productInfoDiv, productInfoFigure);
+        productCard.append(productImg, productInfo);
+        cardsContainer.appendChild(productCard);
+    }
+}
+
+renderProducts();
