@@ -384,7 +384,8 @@ nav {
 }
 .product-detail {
     width: 360px;
-    padding-bottom: 24px;
+    padding: 0 24px 24px;
+    background-color: var(--white);
     position: absolute;
     right: 0;
 }
