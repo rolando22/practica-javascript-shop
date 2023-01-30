@@ -120,7 +120,11 @@ nav {
     display: inline-block;
 }
 .mobile-menu {
+    position: absolute;
+    top: 60px;
+    left: -5px;
     padding: 24px;
+    background-color: var(--white);
 }
 .mobile-menu a {
     text-decoration: none;
@@ -482,6 +486,9 @@ nav {
     .logo {
         display: block;
     }
+    .desktop-menu {
+        display: none;
+    }
     .form-container {
         height: 100%;
     }
@@ -507,5 +514,11 @@ nav {
         position: absolute;
         bottom: 0;
         margin-bottom: 24px;
+    }
+}
+
+@media (min-width: 641px) {
+    .mobile-menu {
+        display: none;
     }
 }
